@@ -25,7 +25,7 @@
                   <Insets top="50.0" />
                </opaqueInsets>
                <children>
-                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="Photo" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../../../../Téléchargements/imageprofil.jpeg" />
                      </image>
@@ -51,7 +51,7 @@
                         </LinearGradient>
                      </textFill>
                   </Label>
-                  <Button fx:id="ChangerPhoto" mnemonicParsing="false" onAction="#ActionChangerPhoto" prefHeight="30.0" prefWidth="110.0" styleClass="b" stylesheets="@application.css" text="Changer Photo" textFill="#fafafa">
+                  <Button fx:id="ChangerPhoto" mnemonicParsing="false" onAction="#chooseImageButtonPushed" prefHeight="30.0" prefWidth="110.0" styleClass="b" stylesheets="@application.css" text="Changer Photo" textFill="#fafafa">
                      <font>
                         <Font name="System Bold" size="10.0" />
                      </font>
