@@ -1,52 +1,33 @@
 package application;
 
+import java.io.File;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
+import javafx.stage.FileChooser;
 
 public class ProfilController {
-	 	@FXML
-	    private TextField Adresse;
+	 	
+	@FXML
+    private Button EnregistrerModifs;
 
-	    @FXML
-	    private TextField Age;
+    @FXML
+    private Button ModifierProfil;
 
-	    @FXML
-	    private TextField Email;
+    @FXML
+    void ActionEnregistrerModifs(ActionEvent event) {
 
-	    @FXML
-	    private ImageView ImageProfil;
+    }
+    private FileChooser fileChooser ;
+    private File filePath ;
+    
+    
+    /*
+     * Cette methode permet de changer la photo de profile d'un utiliseur
+     */
+    @FXML
+    void ActionModifierProfil(ActionEvent event) {
 
-	    @FXML
-	    private Button Modifier;
-	    
-	    @FXML
-	    private Button Changer;
-
-
-	    @FXML
-	    private TextField Nom;
-
-	    @FXML
-	    private TextField Num;
-
-	    @FXML
-	    private TextField Prenom;
-
-	    @FXML
-	    private ComboBox<?> Sexe;
-
-	    @FXML
-	    void ModifierProfil(ActionEvent event) {
-
-	    }
-	    @FXML
-	    void ChangerPhotoProfil(ActionEvent event) {
-
-	    }
-
-
+    }
 }

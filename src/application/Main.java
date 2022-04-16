@@ -5,8 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
+
 
 
 public class Main extends Application {
@@ -22,11 +21,11 @@ public class Main extends Application {
 			*/
 			//AnchorPane root = (AnchorPane) FXMLLoader.load(Main.class.getResource("/application/Profil.fxml"));
 			Parent root  = FXMLLoader.load(getClass().getResource("/application/Profil.fxml"));
-			Scene scene = new Scene(root,1000,600);
+			Scene scene = new Scene(root,1220,700);
 			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Profil");
-			primaryStage.setResizable(false);
+			primaryStage.setResizable(true);
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
