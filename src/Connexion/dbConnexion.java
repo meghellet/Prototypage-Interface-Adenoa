@@ -7,13 +7,14 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class dbConnexion {
-	public Connection Connect() {
+	public static Connection Connect() {
 		try {
-			String url = "";
-			String user ="root";
-			String password ="root";
+			String url = "jdbc:mysql://localhost:3306/Sejours";
 			
-			Class.forName("com.mysql.jdbc.Driver");
+			String user ="phpmyadmin";
+			String password ="Edissyum1998";
+			
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection conn = DriverManager.getConnection(url, user, password);
 			
 			return conn ;

@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="740.0" prefWidth="1220.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ChoixController">
+<AnchorPane prefHeight="740.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ChoixController">
    <children>
       <Label alignment="CENTER" layoutX="450.0" layoutY="94.0" prefHeight="60.0" prefWidth="371.0" text="Faites votre choix" textAlignment="CENTER">
          <font>

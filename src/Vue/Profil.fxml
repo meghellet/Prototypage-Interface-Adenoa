@@ -15,7 +15,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1220.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ProfilController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ProfilController">
    <left>
       <VBox prefHeight="200.0" prefWidth="340.0" styleClass="primary-color" stylesheets="@application.css" BorderPane.alignment="CENTER">
          <children>
@@ -275,7 +275,7 @@
                         <Font name="System Bold" size="10.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnRetour" layoutX="225.0" layoutY="1.0" mnemonicParsing="false" onAction="#ActionRetourVuePrecedente" prefHeight="50.0" prefWidth="200.0" styleClass="b" stylesheets="@application.css" text="Retour" textFill="#fafafa">
+                  <Button fx:id="btnRetour" layoutX="225.0" layoutY="-3.0" mnemonicParsing="false" onAction="#ActionRetourVuePrecedente" prefHeight="50.0" prefWidth="200.0" styleClass="b" stylesheets="@application.css" text="Retour" textFill="#fafafa">
                      <font>
                         <Font name="System Bold" size="10.0" />
                      </font>
