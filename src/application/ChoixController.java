@@ -3,6 +3,7 @@ package application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -12,14 +13,15 @@ public class ChoixController {
 	    void VoirProfil(ActionEvent event) {
 		  
 		  try {
-				Parent root  = FXMLLoader.load(getClass().getResource("/application/Profil.fxml"));
-				Scene scene = new Scene(root,1220,740);
-				scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-				Stage stage = new Stage();
-				stage.setScene(scene);
-				stage.setTitle("Profil");
-				stage.setResizable(true);
-				stage.show();
+				
+				
+			Parent root  = FXMLLoader.load(getClass().getResource("/Vue/Profil.fxml"));
+			Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+			Scene scene = new Scene(root);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setScene(scene);
+			stage.setTitle("Profil");
+			stage.show();
 			} catch(Exception e) {
 				e.printStackTrace();
 			}
@@ -29,13 +31,12 @@ public class ChoixController {
 	    @FXML
 	    void VoirSejours(ActionEvent event) {
 	    	try {
-				Parent root  = FXMLLoader.load(getClass().getResource("/application/Sejours.fxml"));
-				Scene scene = new Scene(root,1220,740);
+	    		Parent root  = FXMLLoader.load(getClass().getResource("/Vue/Sejours.fxml"));
+				Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+				Scene scene = new Scene(root);
 				scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-				Stage stage = new Stage();
 				stage.setScene(scene);
-				stage.setTitle("Profil");
-				stage.setResizable(true);
+				stage.setTitle("Sejours");
 				stage.show();
 			} catch(Exception e) {
 				e.printStackTrace();

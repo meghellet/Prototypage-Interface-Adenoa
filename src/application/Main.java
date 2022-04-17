@@ -20,8 +20,8 @@ public class Main extends Application {
 			primaryStage.show();
 			*/
 			//AnchorPane root = (AnchorPane) FXMLLoader.load(Main.class.getResource("/application/Profil.fxml"));
-			Parent root  = FXMLLoader.load(getClass().getResource("/application/FenetreChoix.fxml"));
-			Scene scene = new Scene(root,517,269);
+			Parent root  = FXMLLoader.load(getClass().getResource("/Vue/FenetreChoix.fxml"));
+			Scene scene = new Scene(root,1220,740);
 			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Choix");
