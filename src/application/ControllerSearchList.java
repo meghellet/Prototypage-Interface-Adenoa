@@ -40,10 +40,14 @@ public class ControllerSearchList implements Initializable {
     private List<String> searchList(String searchStrings, List<String> listOfStrings) {
 
         List<String> searchWordsArray = Arrays.asList(searchStrings.trim().split(" "));
-
+       
+        if(searchWordsArray.toString().length()>3) {
         return listOfStrings.stream().filter(input -> {
             return searchWordsArray.stream().allMatch(word ->
                     input.toLowerCase().contains(word.toLowerCase()));
         }).collect(Collectors.toList());
+        }
+        else
+        	return listOfStrings;
     }
 }
