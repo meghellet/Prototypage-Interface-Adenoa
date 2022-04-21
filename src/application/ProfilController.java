@@ -2,12 +2,16 @@ package application;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -15,7 +19,7 @@ import javafx.stage.Stage;
 
 import javax.imageio.ImageIO;
 
-
+import Model.Utilisateur;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -23,7 +27,23 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
-public class ProfilController {
+public class ProfilController implements Initializable {
+	@FXML
+    private TextField adresse;
+	@FXML
+    private TextField date_naissance;
+
+    @FXML
+    private TextField email;
+
+    @FXML
+    private TextField nom;
+
+    @FXML
+    private TextField num_tel;
+
+    @FXML
+    private TextField prenom;
 	
 	@FXML
     private Button ChangerPhoto;
@@ -41,6 +61,7 @@ public class ProfilController {
     private File filePath;
     
   
+    Utilisateur Utilisateur = new Utilisateur("MEGHELLET", "ESSAID", "12/07/1998", "SAID1998@outlouk.com", "160 rue de la république,84000 avignon ");
     
    
 
@@ -96,6 +117,17 @@ public class ProfilController {
 		}
     	 
     }
+
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		// TODO Auto-generated method stub
+		nom.setText(Utilisateur.getNom());
+		prenom.setText(Utilisateur.getPrenom());
+		date_naissance.setText(Utilisateur.getDate_naissance());
+		num_tel.setText(Utilisateur.getNumeroTel());
+		email.setText(Utilisateur.getEmail());
+		adresse.setText(Utilisateur.getAdresse());
+	}
 
 	
     

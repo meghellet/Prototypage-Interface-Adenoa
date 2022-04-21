@@ -17,6 +17,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -89,8 +90,11 @@ public class SejourController implements Initializable {
 				
 				//Ajout des valeurs récupéres dans les colonnes 
 		    	HoteColumn.setCellValueFactory(new PropertyValueFactory<Sejour, StringProperty>("HoteColumn"));
+		    	//HoteColumn.setStyle( "-fx-alignment: CENTER;");
 		    	NbrPersonnesRechercheesColumn.setCellValueFactory(new PropertyValueFactory<Sejour, IntegerProperty>("NbrPersonnesRechercheesColumn"));
+		    	//NbrPersonnesRechercheesColumn.setStyle( "-fx-alignment: CENTER;");
 		    	NbrJoursColumn.setCellValueFactory(new PropertyValueFactory<Sejour, IntegerProperty>("NbrJoursColumn"));
+		    	//NbrJoursColumn.setStyle( "-fx-alignment: CENTER;");
 		    	CompetancesColumn.setCellValueFactory(new PropertyValueFactory<Sejour,StringProperty>("CompetancesColumn"));
 		    	RestaurationColumn.setCellValueFactory(new PropertyValueFactory<Sejour,StringProperty>("RestaurationColumn"));
 		    	DatesColumn.setCellValueFactory(new PropertyValueFactory<Sejour,StringProperty>("DatesColumn"));
