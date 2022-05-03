@@ -36,12 +36,12 @@ public class ControllerSearchList implements Initializable {
         service.setCellValueFactory(new PropertyValueFactory<>("service"));        
         other.setCellValueFactory(new PropertyValueFactory<>("other"));       
         
-        Client client1 = new Client(1, "Abderrahim", "bouhriz@gmail.com", "Jardinage", 2);
+        Client client1 = new Client(1, "Abderrahim", "abder@gmail.com", "Jardinage", 2);
         Client client2 = new Client( 2, "Thomas", "tthom@gmail.com", "Jardinage", 3);
         Client client3 = new Client( 3, "Lydia", "llydia@gmail.com", "Cuisinier", 1);
         Client client4 = new Client(4, "Essaid", "eessaid@gmail.com", "Jardinage", 2);
-        Client client5 = new Client( 3, "Dame", "ddame@gmail.com", "Cuisinier", 4);
-        Client client6 = new Client(4, "Killian", "Kkil@gmail.com", "Cuisinier", 2); 
+        Client client5 = new Client( 3, "Dame", "dame@gmail.com", "Cuisinier", 4);
+        Client client6 = new Client(4, "Killian", "Kil@gmail.com", "Cuisinier", 2); 
            
         clients.addAll(client1,client2, client3, client4,client5,client6);
         
@@ -54,9 +54,15 @@ public class ControllerSearchList implements Initializable {
 				}
 				String toLowerCaseFilter = input.toLowerCase();
 				
+				System.err.println("Service ** "+client.getService());
+				System.err.println("Email ** "+client.getEmail());
+				System.err.println("Firstname **"+client.getFirstName());
+				
 				if (client.getFirstName().toLowerCase().indexOf(toLowerCaseFilter) != -1 ) {
 					return true;
 				} else if (client.getService().toLowerCase().indexOf(toLowerCaseFilter) != -1) {
+					return true;
+				}else if(client.getEmail().toLowerCase().indexOf(toLowerCaseFilter) !=-1) {
 					return true;
 				}
 				else if (String.valueOf(client.getOther()).indexOf(toLowerCaseFilter)!=-1)
