@@ -36,7 +36,7 @@ public class ControllerSearchList implements Initializable {
         service.setCellValueFactory(new PropertyValueFactory<>("service"));        
         other.setCellValueFactory(new PropertyValueFactory<>("other"));       
         
-        Client client1 = new Client(1, "Abderrahim", "abder@gmail.com", "Jardinage", 2);
+        Client client1 = new Client(1, "Abderrahim", "aabder@gmail.com", "Jardinage", 2);
         Client client2 = new Client( 2, "Thomas", "tthom@gmail.com", "Jardinage", 3);
         Client client3 = new Client( 3, "Lydia", "llydia@gmail.com", "Cuisinier", 1);
         Client client4 = new Client(4, "Essaid", "eessaid@gmail.com", "Jardinage", 2);
