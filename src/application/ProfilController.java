@@ -1,5 +1,6 @@
 package application;
 
+import java.awt.font.NumericShaper;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.net.URL;
@@ -61,12 +62,18 @@ public class ProfilController implements Initializable {
     private File filePath;
     
   
-    Utilisateur Utilisateur = new Utilisateur("MEGHELLET", "ESSAID", "12/07/1998", "SAID1998@outlouk.com", "160 rue de la république,84000 avignon ");
+    Utilisateur Utilisateur = new Utilisateur("MEGHELLET", "ESSAID", "12/07/1998", "SAID1998@outlouk.com", "0769893745", "160 rue de la république,84000 avignon ");
     
    
 
     @FXML
     void ActionEnregistrerModifs(ActionEvent event) {
+    	Utilisateur.setNom(nom.getText());
+    	Utilisateur.setPrenom(prenom.getText());
+    	Utilisateur.setDate_naissance(date_naissance.getText());
+    	Utilisateur.setEmail(email.getText());
+    	Utilisateur.setAdresse(adresse.getText());
+    	Utilisateur.setNumeroTel(num_tel.getText());
 
     }
     
