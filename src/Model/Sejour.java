@@ -4,11 +4,13 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import javafx.scene.image.ImageView;
 
 public class Sejour {
+	public ImageView PhotoColumn  ;
 	public StringProperty HoteColumn  ;
-	public IntegerProperty  NbrPersonnesRechercheesColumn = new SimpleIntegerProperty();
-	public IntegerProperty NbrJoursColumn  = new SimpleIntegerProperty();
+	public StringProperty  NbrPersonnesRechercheesColumn;
+	public StringProperty NbrJoursColumn ;
 	public StringProperty RestaurationColumn ;
 	public StringProperty CompetancesColumn;
 	public StringProperty DatesColumn;
@@ -16,25 +18,33 @@ public class Sejour {
 	public Sejour() {
 		super();
 	}
-	public Sejour(String Hote, int NbrPersonnesRecherchees, int NbrJours, String Restauration, String Competances, String Dates)
+	public Sejour(String Hote, String NbrPersonnesRecherchees, String NbrJours, String Restauration, String Competances, String Dates, ImageView Photo)
 	{
+		this.PhotoColumn = Photo; 
 		this.HoteColumn = new SimpleStringProperty(Hote) ;
-		this.NbrPersonnesRechercheesColumn = new SimpleIntegerProperty(NbrPersonnesRecherchees)  ;
-		this.NbrJoursColumn = new SimpleIntegerProperty(NbrJours);
+		this.NbrPersonnesRechercheesColumn = new SimpleStringProperty(NbrPersonnesRecherchees)  ;
+		this.NbrJoursColumn = new SimpleStringProperty(NbrJours);
 		this.RestaurationColumn =  new SimpleStringProperty(Restauration);  
 		this.CompetancesColumn = new SimpleStringProperty(Competances) ;
 		this.DatesColumn = new SimpleStringProperty(Dates) ;
 		
 	}
 	
-	 
+	
+	public ImageView getPhotoColumn() {
+		return PhotoColumn;
+	}
+	public void setPhotoColumn(ImageView photoColumn) {
+		PhotoColumn = photoColumn;
+	}
+	
 	public final StringProperty HoteColumnProperty() {
 		return this.HoteColumn ;
 	}
-	public final IntegerProperty NbrPersonnesRechercheesColumnProperty() {
+	public final StringProperty NbrPersonnesRechercheesColumnProperty() {
 		return this.NbrPersonnesRechercheesColumn ;
 	}
-	public final IntegerProperty NbrJoursColumnProperty() {
+	public final StringProperty NbrJoursColumnProperty() {
 		return this.NbrJoursColumn ;
 	}
 	public final StringProperty RestaurationColumnProperty() {
@@ -51,11 +61,11 @@ public class Sejour {
 		
 		return HoteColumn.get();
 	}
-	public final Integer getNbrPersonnesRecherchees(){
+	public final String getNbrPersonnesRecherchees(){
 			
 			return NbrPersonnesRechercheesColumn.get();
 		}
-	public final Integer getNbrJours() {
+	public final String getNbrJours() {
 		
 		return NbrJoursColumn.get();
 	}
