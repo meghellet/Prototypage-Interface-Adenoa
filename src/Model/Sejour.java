@@ -10,7 +10,7 @@ public class Sejour {
 	public ImageView PhotoColumn  ;
 	public StringProperty HoteColumn  ;
 	public StringProperty  NbrPersonnesRechercheesColumn;
-	public StringProperty NbrJoursColumn ;
+	public StringProperty NbrJoursColumn  ;
 	public StringProperty RestaurationColumn ;
 	public StringProperty CompetancesColumn;
 	public StringProperty DatesColumn;
@@ -20,7 +20,7 @@ public class Sejour {
 	}
 	public Sejour(String Hote, String NbrPersonnesRecherchees, String NbrJours, String Restauration, String Competances, String Dates, ImageView Photo)
 	{
-		this.PhotoColumn = Photo; 
+		this.PhotoColumn =  Photo; 
 		this.HoteColumn = new SimpleStringProperty(Hote) ;
 		this.NbrPersonnesRechercheesColumn = new SimpleStringProperty(NbrPersonnesRecherchees)  ;
 		this.NbrJoursColumn = new SimpleStringProperty(NbrJours);

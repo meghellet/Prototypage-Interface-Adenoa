@@ -35,4 +35,13 @@
 
 .table-column {
   -fx-alignment: CENTER;
+  -fx-border-color:#fff;
+  -fx-border-width:0 3 0 0;
+}
+
+.noheader .column-header-background{
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+    -fx-min-height: 0;
+    -fx-alignment: CENTER;
 }
