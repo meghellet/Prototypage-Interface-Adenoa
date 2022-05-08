@@ -19,10 +19,11 @@
                   <TableColumn fx:id="PhotoColumn" prefWidth="99.0" style="-fx-alignment: CENTER;" styleClass="ali" />
                 <TableColumn fx:id="HoteColumn" prefWidth="129.0" style="-fx-alignment: CENTER;" styleClass="ali" />
                 <TableColumn fx:id="NbrPersonnesRechercheesColumn" prefWidth="195.0" style="-fx-alignment: CENTER;" />
-                  <TableColumn fx:id="NbrJoursColumn" prefWidth="137.0" style="-fx-alignment: CENTER;" styleClass="ali" />
-                  <TableColumn fx:id="RestaurationColumn" prefWidth="188.0" style="-fx-alignment: CENTER;" />
-                  <TableColumn fx:id="CompetancesColumn" prefWidth="112.0" style="-fx-alignment: CENTER;" styleClass="-fx-alignment: center-right;" />
-                  <TableColumn fx:id="DatesColumn" prefWidth="207.0" style="-fx-alignment: CENTER;" />
+                  <TableColumn fx:id="NbrJoursColumn" prefWidth="117.0" style="-fx-alignment: CENTER;" styleClass="ali" />
+                  <TableColumn fx:id="RestaurationColumn" prefWidth="142.0" style="-fx-alignment: CENTER;" />
+                  <TableColumn fx:id="CompetancesColumn" prefWidth="104.0" style="-fx-alignment: CENTER;" styleClass="-fx-alignment: center-right;" />
+                  <TableColumn fx:id="DatesColumn" prefWidth="175.0" style="-fx-alignment: CENTER;" />
+                  <TableColumn fx:id="ActionColumn" prefWidth="91.0" style="-fx-alignment: CENTER;" />
               </columns>
                <styleClass>
                   <String fx:value="noheader" />

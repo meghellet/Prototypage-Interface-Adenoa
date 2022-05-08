@@ -85,28 +85,27 @@ public class SejourController implements Initializable {
 
 	    	try {
 	    	
-	    		//faire appel a mon class dbConnexion
+	    		//Faire appel à ma class dbConnexion
 	    		
 				Connection conn = dbConnexion.Connect();
 				String sql = "SELECT * FROM Sejours" ;
 				
 				PreparedStatement statement = conn.prepareStatement(sql) ;
 				
-				 // inside Observablelist and then set these inside tableview
-		        ImageView emp1photo = new ImageView(new Image(this.getClass().getResourceAsStream("images/sejours/sejour02.jpg")));
+			
+		        ImageView PhotoProfilDefaut = new ImageView(new Image(this.getClass().getResourceAsStream("images/sejours/sejour02.jpg")));
 				
 				//Executer la requête SQL
 				ResultSet rs = statement.executeQuery() ;
 				while(rs.next()) {
-					data.add(new Sejour(rs.getString(1), "Personnes Recherchées :"+ rs.getInt(2), "Nmbr Jours :" + rs.getInt(3), "Food :" + rs.getString(4), rs.getString(5), rs.getString(6), emp1photo));
+					//Recuperation des données depuis la base de données
+					data.add(new Sejour(rs.getString(1), "Personnes Recherchées :"+ rs.getInt(2), "Nmbr Jours :" + rs.getInt(3), "Food :" + rs.getString(4), rs.getString(5), rs.getString(6), PhotoProfilDefaut));
 					
 				}
 				
-				//Ajout dee valeurs récupéres dans less colonnes 
-				//PhotoColumn.setCellValueFactory(new PropertyValueFactory<Sejour, ImageView>("PhotoColumn"));
-
-				//PhotoColumn.setCellValueFactory(new PropertyValueFactory<>("PhotoColumn"));
-				
+				//Ajout dee valeurs récupéres dans les colonnes 
+			
+				//Set de la photo de sejour
 				PhotoColumn.setCellFactory(col -> {
 		            TableCell<Sejour, StringProperty> cell = new TableCell<>();
 		            ImageView ImageSejour = new ImageView(new Image(this.getClass().getResourceAsStream("images/sejours/sejour02.jpg")));
@@ -115,53 +114,36 @@ public class SejourController implements Initializable {
 		            Sejour sejourExemple = new Sejour("Essaid", "3", "3", "Essaid", "Essaid","Essaid", ImageSejour);
 		            Node graphic = createGraphicImage(sejourExemple.getPhotoColumn());
                     cell.graphicProperty().bind(Bindings.when(cell.emptyProperty()).then((Node) null).otherwise(graphic));
-		            /*
-		            cell.itemProperty().addListener((observableValue, o, newValue) -> {
-		            
-		                if (newValue != null) {
-		                	System.out.println("jes uis la WWWWWWWWWWWWWWWWWWWWWWWWWW");
-		                    Node graphic = createDriverGraphic(newValue);
-		                    cell.graphicProperty().bind(Bindings.when(cell.emptyProperty()).then((Node) null).otherwise(graphic));
-		                }
-		                
-		            });*/
+		          
 		           
 		            return cell;
 		        });
 				
-				//Ajout des valeurs récupéres dans les colonnes 
-		    	//HoteColumn.setCellValueFactory(new PropertyValueFactory<Sejour, StringProperty>("HoteColumn"));
 				
+		    	//Set informations sur le profil Hote 
 				HoteColumn.setCellFactory(col -> {
 			            TableCell<Sejour, StringProperty> cell = new TableCell<>();
-			            ImageView emp1photo2 = new ImageView(new Image(this.getClass().getResourceAsStream("images/profile_picture.png")));
+			            ImageView photoProfil = new ImageView(new Image(this.getClass().getResourceAsStream("images/profile_picture.png")));
 			            
-						
-			            Sejour sejour1 = new Sejour("Essaid", "3", "3", "Essaid", "Essaid","Essaid", emp1photo2);
-			            Node graphic = createDriverGraphic(sejour1.getHote());
+						//Set Hotename en creant un profile hote 
+			            Sejour ProfilHote = new Sejour("Essaid", "3", "3", "Essaid", "Essaid","Essaid", photoProfil);
+			            Node graphic = createDriverGraphic(ProfilHote.getHote());
 	                    cell.graphicProperty().bind(Bindings.when(cell.emptyProperty()).then((Node) null).otherwise(graphic));
-			            /*
-			            cell.itemProperty().addListener((observableValue, o, newValue) -> {
-			            
-			                if (newValue != null) {
-			                	System.out.println("jes uis la WWWWWWWWWWWWWWWWWWWWWWWWWW");
-			                    Node graphic = createDriverGraphic(newValue);
-			                    cell.graphicProperty().bind(Bindings.when(cell.emptyProperty()).then((Node) null).otherwise(graphic));
-			                }
-			                
-			            });*/
+			          
 			           
 			            return cell;
 			        });
 				
-				HoteColumn.setStyle( "-fx-alignment: CENTER;");
+				
 		    	
 				NbrPersonnesRechercheesColumn.setCellValueFactory(new PropertyValueFactory<Sejour, IntegerProperty>("NbrPersonnesRechercheesColumn"));
 		    	//NbrPersonnesRechercheesColumn.setStyle( "-fx-alignment: CENTER;");
 		    	NbrJoursColumn.setCellValueFactory(new PropertyValueFactory<Sejour, IntegerProperty>("NbrJoursColumn"));
 		    	//NbrJoursColumn.setStyle( "-fx-alignment: CENTER;");
 		    	CompetancesColumn.setCellValueFactory(new PropertyValueFactory<Sejour,StringProperty>("CompetancesColumn"));
+		    	
 		    	RestaurationColumn.setCellValueFactory(new PropertyValueFactory<Sejour,StringProperty>("RestaurationColumn"));
+		    	
 		    	DatesColumn.setCellValueFactory(new PropertyValueFactory<Sejour,StringProperty>("DatesColumn"));
 		    	
 		    	
@@ -182,11 +164,11 @@ public class SejourController implements Initializable {
 
 	    
 	    //L'ajout d'une photo de Sejour 
-	    private Node createGraphicImage(ImageView photoColumn2) {
+	    private Node createGraphicImage(ImageView photoColumn) {
 			// TODO Auto-generated method stub
 	    	GridPane trackingDetailsHolder = new GridPane();
 	         trackingDetailsHolder.setHgap(5);
-	         ImageView driverPicture = photoColumn2;
+	         ImageView driverPicture = photoColumn;
 	         driverPicture.setPreserveRatio(true);
 	         driverPicture.setFitHeight(80d);
 	         GridPane.setRowSpan(driverPicture, 2);
@@ -231,8 +213,8 @@ public class SejourController implements Initializable {
 	         return trackingDetailsHolder;
 		}
 		
-		//Generer un nombre aleatoire en 0 et 5
-		int genererInt(int borneInf, int borneSup){
+		
+		private int genererInt(int borneInf, int borneSup){
 			   Random random = new Random();
 			   int nb;
 			   nb = borneInf+random.nextInt(borneSup-borneInf);
@@ -241,10 +223,7 @@ public class SejourController implements Initializable {
 
 	    
 	    
-	    
-	    
-	    
-		@FXML
+	    @FXML
 	    void ActionRechercherBtn(ActionEvent event) {
 	    	System.out.println("vous avez cliquer sur le bouton Rechercher ");
 	    	
