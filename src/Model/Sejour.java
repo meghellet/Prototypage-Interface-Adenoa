@@ -4,6 +4,7 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 
 public class Sejour {
@@ -14,6 +15,7 @@ public class Sejour {
 	public StringProperty RestaurationColumn ;
 	public StringProperty CompetancesColumn;
 	public StringProperty DatesColumn;
+	public Button button;
 	
 	public Sejour() {
 		super();
@@ -27,9 +29,17 @@ public class Sejour {
 		this.RestaurationColumn =  new SimpleStringProperty(Restauration);  
 		this.CompetancesColumn = new SimpleStringProperty(Competances) ;
 		this.DatesColumn = new SimpleStringProperty(Dates) ;
+		this.button = new Button("Reserver");
 		
 	}
 	
+	
+	public Button getButton() {
+		return button;
+	}
+	public void setButton(Button button) {
+		this.button = button;
+	}
 	
 	public ImageView getPhotoColumn() {
 		return PhotoColumn;

@@ -73,6 +73,10 @@ public class SejourController implements Initializable {
 	    @FXML
 	    private TableColumn<Sejour, StringProperty> PhotoColumn;
 	    
+	    @FXML
+	    private TableColumn<Sejour, StringProperty> ActionColumn;
+
+	    
 	    
 	    
 	    @FXML
@@ -145,6 +149,10 @@ public class SejourController implements Initializable {
 		    	RestaurationColumn.setCellValueFactory(new PropertyValueFactory<Sejour,StringProperty>("RestaurationColumn"));
 		    	
 		    	DatesColumn.setCellValueFactory(new PropertyValueFactory<Sejour,StringProperty>("DatesColumn"));
+		    	
+		    	ActionColumn.setCellValueFactory(new PropertyValueFactory<Sejour,StringProperty>("button"));
+		    
+		    	
 		    	
 		    	
 		    	table.getItems().addAll(data);

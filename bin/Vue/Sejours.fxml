@@ -23,7 +23,7 @@
                   <TableColumn fx:id="RestaurationColumn" prefWidth="142.0" style="-fx-alignment: CENTER;" />
                   <TableColumn fx:id="CompetancesColumn" prefWidth="104.0" style="-fx-alignment: CENTER;" styleClass="-fx-alignment: center-right;" />
                   <TableColumn fx:id="DatesColumn" prefWidth="175.0" style="-fx-alignment: CENTER;" />
-                  <TableColumn fx:id="ActionColumn" prefWidth="91.0" style="-fx-alignment: CENTER;" />
+                  <TableColumn fx:id="ActionColumn" prefWidth="93.0" style="-fx-alignment: CENTER;" />
               </columns>
                <styleClass>
                   <String fx:value="noheader" />
@@ -47,7 +47,7 @@
       </Pane>
       <Pane layoutX="47.0" layoutY="91.0" prefHeight="66.0" prefWidth="1022.0" stylesheets="@../application/application.css">
          <children>
-            <TextField layoutX="204.0" layoutY="16.0" prefHeight="37.0" prefWidth="636.0" promptText="Recherchez ce que vous voulez ..." style="-fx-background-color: #000000;" styleClass="text-input" stylesheets="@../application/application.css">
+            <TextField layoutX="204.0" layoutY="16.0" prefHeight="37.0" prefWidth="636.0" promptText="Recherchez ce que vous voulez ..." style="-fx-background-color: #000000;" styleClass="text-input">
                <font>
                   <Font size="19.0" />
                </font>
