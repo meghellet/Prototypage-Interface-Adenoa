@@ -68,9 +68,9 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Text>
-            <Button layoutX="617.0" layoutY="27.0" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Compétance(s)?" textFill="WHITE" />
-            <Button layoutX="819.0" layoutY="28.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="Email?" textFill="WHITE" />
-            <Button layoutX="473.0" layoutY="29.0" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Hote?" textFill="#fffefe" />
+            <Button fx:id="CompeResearchBtn" layoutX="617.0" layoutY="27.0" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Compétance(s)?" textFill="WHITE" />
+            <Button fx:id="EmailResearchBtn" layoutX="819.0" layoutY="28.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="Email?" textFill="WHITE" />
+            <Button fx:id="HoteResearchBtn" layoutX="473.0" layoutY="29.0" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Hote?" textFill="#fffefe" />
          </children>
       </Pane>
    </children>

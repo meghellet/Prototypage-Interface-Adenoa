@@ -29,8 +29,10 @@ import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
@@ -75,8 +77,23 @@ public class SejourController implements Initializable {
 	    
 	    @FXML
 	    private TableColumn<Sejour, StringProperty> ActionColumn;
+	    
+	    
+	    //Les Trois options de recherche
+	    @FXML
+	    private Button CompeResearchBtn;
+	    @FXML
+	    private Button EmailResearchBtn;
+	    @FXML
+	    private Button HoteResearchBtn;
 
 	    
+	   
+	    
+	    
+	  
+
+      
 	    
 	    
 	    @FXML
@@ -153,6 +170,7 @@ public class SejourController implements Initializable {
 		    	ActionColumn.setCellValueFactory(new PropertyValueFactory<Sejour,StringProperty>("button"));
 		    
 		    	//ActionColumn.setStyle( "-fx-background-color: pink; -fx-text-fill: green; -fx-font-size: 10px;");
+		    	//ActionColumn.setStyle("-fx-text-fill: red ; -fx-background-color: red ; -fx-font: 22 arial; -fx-base: #b6e7c9;");
 		    	
 		    	
 		    	table.getItems().addAll(data);

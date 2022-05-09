@@ -30,6 +30,7 @@ public class Sejour {
 		this.CompetancesColumn = new SimpleStringProperty(Competances) ;
 		this.DatesColumn = new SimpleStringProperty(Dates) ;
 		this.button = new Button("Reserver");
+		this.button.setStyle( "-fx-background-color: #3C3D5B ; -fx-text-fill: white; -fx-font-size: 10px;");
 		
 	}
 	
