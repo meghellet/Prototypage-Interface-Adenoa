@@ -152,7 +152,7 @@ public class SejourController implements Initializable {
 		    	
 		    	ActionColumn.setCellValueFactory(new PropertyValueFactory<Sejour,StringProperty>("button"));
 		    
-		    	
+		    	//ActionColumn.setStyle( "-fx-background-color: pink; -fx-text-fill: green; -fx-font-size: 10px;");
 		    	
 		    	
 		    	table.getItems().addAll(data);
