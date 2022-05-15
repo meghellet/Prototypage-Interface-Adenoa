@@ -1,13 +1,11 @@
 package Model;
 
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 
-public class Sejour {
+public class SejourDisco {
 	public ImageView PhotoColumn  ;
 	public StringProperty HoteColumn  ;
 	public StringProperty  NbrPersonnesRechercheesColumn;
@@ -17,10 +15,10 @@ public class Sejour {
 	public StringProperty DatesColumn;
 	public Button button;
 	
-	public Sejour() {
+	public SejourDisco() {
 		super();
 	}
-	public Sejour(String Hote, String NbrPersonnesRecherchees, String NbrJours, String Restauration, String Competances, String Dates, ImageView Photo)
+	public SejourDisco(String Hote, String NbrPersonnesRecherchees, String NbrJours, String Restauration, String Competances, String Dates, ImageView Photo)
 	{
 		this.PhotoColumn =  Photo; 
 		this.HoteColumn = new SimpleStringProperty(Hote) ;
@@ -29,7 +27,7 @@ public class Sejour {
 		this.RestaurationColumn =  new SimpleStringProperty(Restauration);  
 		this.CompetancesColumn = new SimpleStringProperty(Competances) ;
 		this.DatesColumn = new SimpleStringProperty(Dates) ;
-		this.button = new Button("Reserver");
+		this.button = new Button("Se connecter");
 		this.button.setStyle( "-fx-background-color: #3C3D5B ; -fx-text-fill: white; -fx-font-size: 10px;");
 		
 	}
@@ -89,10 +87,8 @@ public class Sejour {
 		return DatesColumn.get();
 	}
 	public final String getCompetances() {
-			
-			return CompetancesColumn.get();
-		}
 		
-	
-	
+		return CompetancesColumn.get();
+	}
+
 }

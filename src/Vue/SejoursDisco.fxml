@@ -14,11 +14,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="750.0" prefWidth="1000.0" styleClass="toggle-button" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SejourController">
+<AnchorPane prefHeight="750.0" prefWidth="1000.0" styleClass="toggle-button" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SejourDiscoController">
    <children>
       <Pane layoutX="52.0" layoutY="174.0" prefHeight="432.0" prefWidth="1040.0">
          <children>
-            <TableView fx:id="table" layoutX="-14.0" layoutY="16.0" prefHeight="447.0" prefWidth="1055.0" style="-fx-background-color: #242551;" stylesheets="@../application/application.css">
+            <TableView fx:id="table" layoutX="-14.0" layoutY="14.0" prefHeight="447.0" prefWidth="1055.0" style="-fx-background-color: #242551;" stylesheets="@../application/application.css">
               <columns>
                   <TableColumn fx:id="PhotoColumn" prefWidth="99.0" style="-fx-alignment: CENTER;" styleClass="ali" />
                 <TableColumn fx:id="HoteColumn" prefWidth="129.0" style="-fx-alignment: CENTER;" styleClass="ali" />
@@ -39,57 +39,63 @@
       </Pane>
       <Pane layoutX="38.0" layoutY="648.0" prefHeight="44.0" prefWidth="1070.0">
          <children>
-            <Button fx:id="AfficherSejourbtn" layoutX="603.0" layoutY="9.0" mnemonicParsing="false" onAction="#ActionAfficherSejour" prefHeight="24.0" prefWidth="190.0" stylesheets="@../application/application.css" text="Afficher Sejours" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="13.0" />
-               </font></Button>
-            <Button fx:id="RetourBtn" layoutX="330.0" layoutY="8.0" mnemonicParsing="false" onAction="#ActionRetourBtn" prefHeight="24.0" prefWidth="190.0" stylesheets="@../application/application.css" text="Retour" textFill="WHITE">
+            <Button fx:id="AfficherSejourbtn" layoutX="422.0" layoutY="9.0" mnemonicParsing="false" onAction="#ActionAfficherSejour" prefHeight="24.0" prefWidth="190.0" stylesheets="@../application/application.css" text="Afficher Sejours" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font></Button>
          </children>
       </Pane>
-      <Pane layoutX="47.0" layoutY="116.0" prefHeight="66.0" prefWidth="1022.0" stylesheets="@../application/application.css">
+      <Pane layoutX="47.0" layoutY="123.0" prefHeight="54.0" prefWidth="1022.0" stylesheets="@../application/application.css">
          <children>
-            <TextField fx:id="filterField" layoutX="204.0" layoutY="16.0" prefHeight="37.0" prefWidth="636.0" promptText="Recherchez ce que vous voulez ..." style="-fx-background-color: #000000;" styleClass="text-input">
+            <TextField fx:id="filterField" layoutX="203.0" layoutY="10.0" prefHeight="37.0" prefWidth="636.0" promptText="Recherchez ce que vous voulez ..." style="-fx-background-color: #000000;" styleClass="text-input">
                <font>
                   <Font size="19.0" />
                </font>
             </TextField>
-            <ImageView fitHeight="40.0" fitWidth="50.0" layoutX="152.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="40.0" fitWidth="50.0" layoutX="152.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../icons/icons8-search-100.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
-      <Pane layoutX="47.0" layoutY="58.0" prefHeight="66.0" prefWidth="1022.0" stylesheets="@../application/application.css">
+      <Pane layoutX="47.0" layoutY="70.0" prefHeight="66.0" prefWidth="1022.0" stylesheets="@../application/application.css">
          <children>
             <Text layoutX="47.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lancer une recherche Par :" wrappingWidth="429.3961639404297">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Text>
-            <Button fx:id="btnEmail" layoutX="617.0" layoutY="27.0" mnemonicParsing="false" onAction="#btnEmailClick" style="-fx-background-color: #000000;" text="Compétence(s)?" textFill="WHITE" />
+            <Button fx:id="btnEmail" layoutX="627.0" layoutY="28.0" mnemonicParsing="false" onAction="#btnEmailClick" style="-fx-background-color: #000000;" text="Compétence(s)?" textFill="WHITE" />
             <Button fx:id="btnService" layoutX="819.0" layoutY="28.0" mnemonicParsing="false" onAction="#btnServiceClick" prefHeight="24.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="Dates?" textFill="WHITE" />
             <Button fx:id="btnName" layoutX="473.0" layoutY="29.0" mnemonicParsing="false" onAction="#btnNameClick" style="-fx-background-color: #000000;" text="Restauration?" textFill="#fffefe" />
          </children>
       </Pane>
-      <HBox layoutX="-0.3000000000000007" layoutY="-1.0" prefHeight="47.0" prefWidth="1126.0" style="-fx-background-color: #2f92b6;" AnchorPane.leftAnchor="-9.0" AnchorPane.rightAnchor="9.0">
+      <HBox layoutX="2.0" layoutY="1.0" prefHeight="47.0" prefWidth="1296.0" style="-fx-background-color: lightgrey;">
          <children>
-            <Pane prefHeight="47.0" prefWidth="1122.0">
+            <Pane prefHeight="71.0" prefWidth="904.0">
                <children>
-                  <Text layoutX="520.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adenoa">
+                  <Text layoutX="520.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adenoa">
                      <font>
                         <Font name="System Bold" size="31.0" />
                      </font>
                   </Text>
-                  <ButtonBar prefHeight="40.0" prefWidth="306.0">
-                     <buttons>
-                        <Button fx:id="Profil" mnemonicParsing="false" onAction="#VoirProfilAction" text="Profil" textFill="WHITE" />
-                        <Button fx:id="Voyage" layoutX="125.0" layoutY="18.0" mnemonicParsing="false" onAction="#VoirVoyageAction" prefHeight="24.0" text="Se Deconnecter" textFill="WHITE" />
-                     </buttons>
+                  <ButtonBar prefHeight="40.0" prefWidth="200.0">
+                    <buttons>
+                      <Button fx:id="Profil" mnemonicParsing="false" onAction="#profilAction" text="Profil" textFill="WHITE" />
+                        <Button fx:id="Voyage" layoutX="125.0" layoutY="18.0" mnemonicParsing="false" onAction="#voyagesAction" text="Voyage" textFill="WHITE" />
+                        <Button fx:id="Details" layoutX="125.0" layoutY="18.0" mnemonicParsing="false" onAction="#deconnecterAction" text="Détails" textFill="WHITE" />
+                    </buttons>
                   </ButtonBar>
+               </children>
+            </Pane>
+            <Pane prefHeight="71.0" prefWidth="820.0">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="540.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../application/images/user.png" />
+                     </image>
+                  </ImageView>
                </children>
             </Pane>
          </children>

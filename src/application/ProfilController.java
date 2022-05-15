@@ -80,7 +80,7 @@ public class ProfilController implements Initializable {
     @FXML
     void ActionRetourVuePrecedente(ActionEvent event) {
     	 try {
-				Parent root  = FXMLLoader.load(getClass().getResource("/Vue/FenetreChoix.fxml"));
+				Parent root  = FXMLLoader.load(getClass().getResource("/Vue/SejoursDisco.fxml"));
 				Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 				Scene scene = new Scene(root);
 				stage.setScene(scene);

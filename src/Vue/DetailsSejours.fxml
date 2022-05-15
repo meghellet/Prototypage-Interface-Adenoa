@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1086.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DetailsSejoursController">
+   <children>
+      <Button layoutX="256.0" layoutY="598.0" mnemonicParsing="false" onAction="#startConversation" prefHeight="32.0" prefWidth="256.0" style="-fx-background-color: #2f92b6;" text="Engager la conversation">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Pane layoutX="443.0" layoutY="119.0" prefHeight="252.0" prefWidth="324.0">
+         <children>
+            <Text layoutX="14.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Détails" wrappingWidth="133.13671875">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de personnes" wrappingWidth="133.13671875">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de jours" wrappingWidth="133.13671875">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Restaurations" wrappingWidth="133.13671875">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dates" wrappingWidth="133.13671875">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="personne" layoutX="172.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" />
+            <Text fx:id="nbJours" layoutX="172.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
+            <Text fx:id="restauration" layoutX="172.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Matin / midi" wrappingWidth="94.91455078125" />
+            <Text fx:id="dates" layoutX="129.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12/05/2022 au 15/05/2022" wrappingWidth="205.927734375" />
+            <Separator layoutX="13.0" layoutY="74.0" prefHeight="3.0" prefWidth="231.0" />
+            <Separator layoutX="13.0" layoutY="109.0" prefHeight="3.0" prefWidth="231.0" />
+            <Separator layoutX="13.0" layoutY="146.0" prefHeight="3.0" prefWidth="231.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="598.0" layoutY="454.0" prefHeight="234.0" prefWidth="426.0">
+         <children>
+            <Text layoutX="9.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descriptif du séjour" wrappingWidth="308.13671875">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Text>
+            <Text layoutX="10.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entièrement équipé.Exposé plein sud, très lumineux et calme au 1er étage d'un vieil immeuble marseillais d'un étage avec une petite cave sous l'escalier." wrappingWidth="394.5">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="31.0" layoutY="119.0" prefHeight="345.0" prefWidth="411.0">
+         <children>
+            <ImageView fx:id="imageSejour" fitHeight="324.0" fitWidth="400.0" layoutX="4.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../application/images/sejours/sejour02.jpg" />
+               </image>
+            </ImageView>
+            <Text fx:id="nomSejour" layoutX="40.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Button layoutX="324.0" layoutY="161.0" mnemonicParsing="false" onAction="#nextPicture" style="-fx-background-color: white;" text="&gt;" />
+            <Button layoutX="67.0" layoutY="161.0" mnemonicParsing="false" onAction="#backPicture" style="-fx-background-color: white;" text="&lt;" />
+         </children>
+      </Pane>
+      <HBox layoutX="-2.0" layoutY="-4.0" prefHeight="47.0" prefWidth="1088.0" style="-fx-background-color: #2f92b6;">
+         <children>
+            <Pane prefHeight="47.0" prefWidth="645.0">
+               <children>
+                  <Text layoutX="491.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adenoa">
+                     <font>
+                        <Font name="System Bold" size="31.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="retour" layoutX="48.0" layoutY="6.0" mnemonicParsing="false" onAction="#retourAction" stylesheets="@../application/application.css" text="Retour" textFill="#fcfcfc">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <Text layoutX="760.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HOTE" wrappingWidth="99.85253906250011">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Text>
+      <TextFlow layoutX="763.0" layoutY="177.0" prefHeight="209.0" prefWidth="286.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Magnifique studio au coeur du panierle charme de l'ancien, refait à neuf.Au 3ème et dernier étage d'un immeuble marseillais, il est côté cour, au calme et climatisé.Il n'y a pas de connexion internet ni de TV.Cependant l'appartement est très agréable et situé dans un environnement idéal à quelques mètres à pieds et des plus beaux monuments marseillais:" wrappingWidth="224.58154296875">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+      <TextFlow layoutX="773.0" layoutY="187.0" prefHeight="209.0" prefWidth="286.0" />
+      <Button layoutX="26.0" layoutY="599.0" mnemonicParsing="false" onAction="#validerAction" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #2f92b6;" text="Valider Sejour">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

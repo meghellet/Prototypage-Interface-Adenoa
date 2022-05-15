@@ -31,7 +31,7 @@ public class ChoixController {
 	    @FXML
 	    void VoirSejours(ActionEvent event) {
 	    	try {
-	    		Parent root  = FXMLLoader.load(getClass().getResource("/Vue/Sejours.fxml"));
+	    		Parent root  = FXMLLoader.load(getClass().getResource("/Vue/SejoursDisco.fxml"));
 				Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 				Scene scene = new Scene(root);
 				scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
